@@ -30,8 +30,8 @@ jobs:
 
       - name: 提交更改
         run: |
-          git config --local user.name "github-actions[bot]"
-          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "nnby"
+          git config --local user.email "wus5b38@outlook.com"
           git add data/*
           git commit -m "Update: $(date '+%Y-%m-%d %H:%M:%S')"
           git push
