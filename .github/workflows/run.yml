@@ -1,0 +1,44 @@
+name: 工作流程
+
+on:
+  #schedule:
+    #- cron: '0 20 * * *'
+  watch:
+    types: [started]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v4
+
+      - name: 删除文件
+        run: rm -f data/clash.yaml data/singbox.json data/v2ray.txt data/subscribes.txt
+
+      - name: 设置环境
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 安装依赖
+        run: pip install --upgrade pip pyYAML tqdm geoip2
+
+      - name: 运行脚本
+        run: python -u subscribe/collect.py --overwrite --skip --vitiate
+
+      - name: 提交更改
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/*
+          git commit -m "Update: $(date '+%Y-%m-%d %H:%M:%S')"
+          git push
+
+      - name: 删除工作流程
+        uses: Mattraks/delete-workflow-runs@main
+        continue-on-error: true
+        with:
+          retain_days: "0"
+          keep_minimum_runs: "1"
