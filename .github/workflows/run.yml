@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v7
 
       - name: 删除文件
-        run: rm -f data/clash.yaml data/singbox.json data/v2ray.txt data/subscribes.txt
+        run: rm -f data/{clash.yaml,singbox.json,subscribes.txt,v2ray.txt,valid-domains.txt}
 
       - name: 设置环境
         uses: actions/setup-python@v7
