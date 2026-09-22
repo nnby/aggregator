@@ -1,8 +1,8 @@
 name: 工作流程
 
 on:
-  #schedule:
-    #- cron: '0 20 * * *'
+  schedule:
+    - cron: '0 15 * * 3'
   watch:
     types: [started]
 
