@@ -1,4 +1,4 @@
-https://www.yywhale.com/api/v1/client/subscribe?token=74a8c1f57877433d49a51557e16fc2ac
-https://vv.louwangzhiyu.org/api/v1/client/subscribe?token=ba61609184d32a2738058f3bbea6d244
-https://np2.lianjieni.com/s/325f1b7f9fe8e47c802935ed8bb23df3
-https://shopdcom.pro/api/v1/client/subscribe?token=004f3997df8cb58086fcae6b4de0fece
+https://shopdcom.pro/api/v1/client/subscribe?token=cb603f6686fbd67f7af266008e8b0e4c
+https://www.yywhale.com/api/v1/client/subscribe?token=21b1643d2b2a404602a884389775574c
+https://np2.lianjieni.com/s/9c61df089359f3b393af5c642d0ac062
+https://vv.louwangzhiyu.org/api/v1/client/subscribe?token=38ee14a4f77e164ed9c17c528f46edf5
